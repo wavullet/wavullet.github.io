@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ExCluster 개인정보처리방침 (안드로이드 앱)</title>
+<meta name="description" content="ExCluster 안드로이드 앱 개인정보처리방침">
+<style>
+:root{--bg:#fff;--fg:#1c1e21;--sub:#5b6168;--line:#d9dde1;--accent:#c62828;--th:#f2f4f6}
+@media (prefers-color-scheme:dark){:root{--bg:#121315;--fg:#e8eaed;--sub:#9aa0a6;--line:#2c2f33;--accent:#ff6b5e;--th:#1c1e21}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,"Segoe UI","Noto Sans KR","Malgun Gothic",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:1.7rem;line-height:1.25;margin:.2em 0 .6em}h2{font-size:1.2rem;margin-top:1.8em}
+a{color:var(--accent)}nav{font-size:.9rem;color:var(--sub);margin-bottom:8px}nav a{margin-right:12px}
+.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.92rem;margin:1em 0}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--th)}
+code{background:var(--th);padding:1px 5px;border-radius:4px;font-size:.9em}
+footer{margin-top:3em;color:var(--sub);font-size:.85rem;border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body>
+<main>
+<nav><a href="../../">wavullet</a><a href="../">ExCluster</a><a href="../privacy/">English</a></nav>
+<h1>ExCluster 개인정보처리방침 (안드로이드 앱)</h1>
+<p><strong>ExCluster</strong>는 폰을 계기판처럼 써서 속도, 가상 RPM, 트립, 시계, 몇 가지 게이지를 보여 줍니다. 계정도 광고도 분석 도구도 없고, 데이터를 누구와도 공유하지 않습니다. 아래 표에서 따로 말한 경우를 빼면 모든 것은 폰 안에만 있습니다.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>데이터</th>
+<th>쓰는 곳</th>
+<th>폰 밖으로 나가나요?</th>
+<th>저장하나요?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>정밀 위치(GPS)</td>
+<td>속도, 트립 거리, GPS 상태, 현재 위치의 날씨</td>
+<td>날씨 요청에만 쓰입니다. 소수점 3자리(약 100 m)로 반올림한 위도·경도가 Open-Meteo(open-meteo.com)로 갑니다</td>
+<td>저장하지 않습니다(선택 기능인 경로는 "주행 로그" 참고)</td>
+</tr>
+<tr>
+<td>움직임 센서(가속도계, 자이로)</td>
+<td>G 게이지, 터널 구간 속도 추정, 폰을 만지는 중인지 감지</td>
+<td>아니요</td>
+<td>저장하지 않습니다(선택 기능인 주행 로그에만 기록)</td>
+</tr>
+<tr>
+<td>조도 센서</td>
+<td>화면 밝기 자동 조절(설정의 "화면 밝기: 자동")</td>
+<td>아니요</td>
+<td>저장하지 않습니다(선택 기능인 주행 로그에만 기록)</td>
+</tr>
+<tr>
+<td>폰의 배터리 잔량·온도</td>
+<td>배터리 게이지, 주행 로그</td>
+<td>아니요</td>
+<td>저장하지 않습니다(선택 기능인 주행 로그에만 기록)</td>
+</tr>
+<tr>
+<td>안드로이드 오토로 받는 차량 데이터 — 설정의 "안드로이드 오토" 스위치를 켠 동안에만(기본 꺼짐, 차량 데이터 권한은 켤 때 요청)(속도, 표시 속도, 배터리 잔량과 주행 가능 거리, 주행거리계, 차종, 충전 상태, 톨 카드 상태, 차량 센서)</td>
+<td>차 화면에서 차가 어떤 값을 주는지 보여 주고, 폰 계기판에 주행거리계·배터리·주행 가능 거리를 표시하기 위해서</td>
+<td>아니요</td>
+<td>차량용 앱이 실행되는 동안 폰의 로컬 파일 <code>carprobe.csv</code>에 기록합니다(최대 8 MB, 좌표는 들어 있지 않습니다). 마지막 주행거리계·배터리·주행 가능 거리는 폰의 앱 설정에 저장하고, 차 속도는 GPS가 끊겼을 때 보조값으로 씁니다</td>
+</tr>
+<tr>
+<td>"내 소리"(선택 기능): 사용자가 직접 고른 오디오 파일</td>
+<td>그 일부를 짧게 반복 재생하며 속도와 가속에 따라 변형합니다</td>
+<td>아니요. 사용자가 고른 파일을 읽기만 하고 밖으로 보내지 않습니다</td>
+<td>사용자가 고른 5~10초 구간만 앱 전용 저장소에 보관합니다(파일 전체가 아님). 앱에서 삭제할 수 있고 백업·기기 이전에서 제외됩니다</td>
+</tr>
+<tr>
+<td>음성 속도 안내(선택 기능, 기본 꺼짐)</td>
+<td>달리는 동안 몇 분마다 현재 속도를 말해 줍니다</td>
+<td>"현재 속도 80킬로미터" 같은 문장을 폰에 설치된 텍스트 음성 변환 엔진에 넘길 뿐 앱이 직접 보내는 것은 없습니다. 그 엔진이 온라인 음성을 쓴다면 그 엔진의 개인정보 방침이 적용됩니다</td>
+<td>아니요</td>
+</tr>
+<tr>
+<td>설정, 트립 A/B 거리, 학습한 폰 거치 방향</td>
+<td>사용자의 선택을 유지하기 위해서</td>
+<td>아니요</td>
+<td>폰 안에 저장합니다</td>
+</tr>
+<tr>
+<td>주행 로그(숨은 디버그 모드, 기본 꺼짐)</td>
+<td>속도 정확도 분석</td>
+<td>사용자가 직접 내보낼 때만(공유 시트)</td>
+<td>폰 안에 저장합니다: 속도, 센서 값(조도 포함), 위성 수, 시간 정보. <strong>위도·경도는 "경로 기록"을 켠 경우에만 기록합니다</strong>(기본 꺼짐). 내보낼 때 위치를 뺄 수 있습니다. 정한 일수(기본 14일)가 지난 로그는 자동으로 지웁니다</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>디버그 로그, 차량 데이터 파일, "내 소리" 클립은 안드로이드 백업과 기기 이전에서 제외됩니다.</li>
+<li>폰 설정에서 언제든 위치를 끌 수 있습니다. 끄면 앱은 속도를 보여 줄 수 없습니다. 앱(또는 앱 데이터)을 지우면 저장된 것이 모두 사라지고, 주행 로그 화면에서 세션만 따로 지울 수도 있습니다.</li>
+<li>날씨: 요청에는 반올림한 좌표만 들어가고 식별자는 없습니다. 이 요청에는 Open-Meteo의 방침이 적용됩니다.</li>
+<li>어린이: 이 앱은 어린이를 대상으로 하지 않습니다.</li>
+<li>문의: wavullet@gmail.com</li>
+</ul>
+<p>시행일: 2026-11-15</p>
+<footer>wavullet</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ExCluster privacy policy (Android app)</title>
+<meta name="description" content="Privacy policy of the ExCluster Android app">
+<style>
+:root{--bg:#fff;--fg:#1c1e21;--sub:#5b6168;--line:#d9dde1;--accent:#c62828;--th:#f2f4f6}
+@media (prefers-color-scheme:dark){:root{--bg:#121315;--fg:#e8eaed;--sub:#9aa0a6;--line:#2c2f33;--accent:#ff6b5e;--th:#1c1e21}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,"Segoe UI","Noto Sans KR","Malgun Gothic",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:1.7rem;line-height:1.25;margin:.2em 0 .6em}h2{font-size:1.2rem;margin-top:1.8em}
+a{color:var(--accent)}nav{font-size:.9rem;color:var(--sub);margin-bottom:8px}nav a{margin-right:12px}
+.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.92rem;margin:1em 0}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--th)}
+code{background:var(--th);padding:1px 5px;border-radius:4px;font-size:.9em}
+footer{margin-top:3em;color:var(--sub);font-size:.85rem;border-top:1px solid var(--line);padding-top:12px}
+</style>
+</head>
+<body>
+<main>
+<nav><a href="../../">wavullet</a><a href="../">ExCluster</a><a href="../privacy-ko/">한국어</a></nav>
+<h1>ExCluster privacy policy (Android app)</h1>
+<p><strong>ExCluster</strong> shows speed, a virtual RPM, trips, clock and a few gauges on a phone used as an instrument cluster. It has no
+account, no advertising and no analytics, and it does not share data with anyone. Everything below stays on the phone unless
+the table says otherwise.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Data</th>
+<th>What for</th>
+<th>Leaves the phone?</th>
+<th>Stored?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Precise location (GPS)</td>
+<td>Speed, trip distance, GPS state; the current position's weather</td>
+<td>Only for the weather request: latitude and longitude rounded to 3 decimals (about 100 m) go to Open-Meteo (open-meteo.com)</td>
+<td>Not stored (see "Drive log" for the optional route)</td>
+</tr>
+<tr>
+<td>Motion sensors (accelerometer, gyroscope)</td>
+<td>G gauge, estimating speed through tunnels, noticing that the phone is being handled</td>
+<td>No</td>
+<td>Not stored (only in the optional drive log)</td>
+</tr>
+<tr>
+<td>Ambient light sensor</td>
+<td>Adjusts the screen brightness automatically (settings: "Screen brightness: Auto")</td>
+<td>No</td>
+<td>Not stored (only in the optional drive log)</td>
+</tr>
+<tr>
+<td>Battery level and temperature of the phone</td>
+<td>Battery gauge, drive log</td>
+<td>No</td>
+<td>Not stored (only in the optional drive log)</td>
+</tr>
+<tr>
+<td>Car data through Android Auto, only while the "Android Auto" switch in the settings is on (off by default; the car data permissions are asked when you turn it on) (speed, displayed speed, battery level and range, odometer, car model, charging state, tolls card state, car sensors)</td>
+<td>Shown on the car screen so you can see what the car provides, and on the phone's gauge (odometer, battery level, range)</td>
+<td>No</td>
+<td>Written to a local file <code>carprobe.csv</code> on the phone (capped at 8 MB) while the car app runs; it contains no coordinates. The last odometer, battery level and range are kept in the app's settings on the phone; the car speed is used as a back-up when GPS is lost</td>
+</tr>
+<tr>
+<td>"My sound" (optional): an audio file you pick yourself</td>
+<td>Plays a short looped part of it, changed by speed and acceleration</td>
+<td>No. The app reads the file you choose and never uploads it</td>
+<td>Only the 5 to 10 second part you choose is kept, in the app's private storage (not the whole file); you can delete it in the app, and it is excluded from backups and device transfers</td>
+</tr>
+<tr>
+<td>Spoken speed (optional, off by default)</td>
+<td>Says your current speed every few minutes while you drive</td>
+<td>The sentence (for example "Current speed 80 kilometers per hour") is handed to the text-to-speech engine installed on the phone; the app itself sends nothing. If that engine uses an online voice, its own privacy policy applies</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Settings, trip A / B distances, learned phone mount direction</td>
+<td>Keep your choices</td>
+<td>No</td>
+<td>On the phone</td>
+</tr>
+<tr>
+<td>Drive log (hidden debug mode, off by default)</td>
+<td>Analysing speed accuracy</td>
+<td>Only if you export it yourself (share sheet)</td>
+<td>On the phone: speed, sensor values (including the ambient light), satellite counts and timings. <strong>Latitude / longitude are written only if you switch on "Record route"</strong> (off by default); the export can leave them out. Logs older than the chosen number of days (default 14) are deleted automatically</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>Debug logs, the car-data file and the "My sound" clip are excluded from Android backups and device transfers.</li>
+<li>You can turn location off in the phone's settings at any time; the app then cannot show speed. Delete the app (or its data)
+  to remove everything it stored; the drive log screen can also delete sessions.</li>
+<li>Weather: the request contains only the rounded coordinates, no identifier. Open-Meteo's own policy applies to it.</li>
+<li>Children: the app is not directed at children.</li>
+<li>Contact: wavullet@gmail.com</li>
+</ul>
+<p>Effective date: 2026-11-15</p>
+<footer>wavullet</footer>
+</main>
+</body>
+</html>
