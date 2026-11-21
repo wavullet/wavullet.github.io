@@ -79,6 +79,12 @@ the table says otherwise.</p>
 <td>No</td>
 </tr>
 <tr>
+<td>Speed-camera list (Korea only; off by default, a setting you turn on)</td>
+<td>Warns about speed cameras and average-speed sections</td>
+<td>The app downloads the public speed-camera list from the Korean public data portal (data.go.kr) about once a month, only if you turned the setting on (Wi-Fi by default; mobile data only if you allow it), and only when the phone is in Korea. The request contains no location and no identifier; like any web request, the portal can see the phone's IP address. Camera matching happens on the phone</td>
+<td>The downloaded list (about 10 MB) is kept in the app's private storage</td>
+</tr>
+<tr>
 <td>Settings, trip A / B distances, learned phone mount direction</td>
 <td>Keep your choices</td>
 <td>No</td>
@@ -96,11 +102,12 @@ the table says otherwise.</p>
 <li>Debug logs, the car-data file and the "My sound" clip are excluded from Android backups and device transfers.</li>
 <li>You can turn location off in the phone's settings at any time; the app then cannot show speed. Delete the app (or its data)
   to remove everything it stored; the drive log screen can also delete sessions.</li>
+<li>Speed cameras: the list is public data of the Korean government (Public Data Portal); the app only downloads it and never sends your position. The portal's own policy applies to the download.</li>
 <li>Weather: the request contains only the rounded coordinates, no identifier. Open-Meteo's own policy applies to it.</li>
 <li>Children: the app is not directed at children.</li>
 <li>Contact: wavullet@gmail.com</li>
 </ul>
-<p>Effective date: 2026-11-15</p>
+<p>Effective date: 2026-11-21</p>
 <footer>wavullet</footer>
 </main>
 </body>
