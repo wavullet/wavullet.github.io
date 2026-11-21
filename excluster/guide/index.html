@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ExCluster user guide</title>
+<meta name="description" content="User guide of the ExCluster Android app">
+<style>
+:root{--bg:#fff;--fg:#1c1e21;--sub:#5b6168;--line:#d9dde1;--accent:#c62828;--th:#f2f4f6}
+@media (prefers-color-scheme:dark){:root{--bg:#121315;--fg:#e8eaed;--sub:#9aa0a6;--line:#2c2f33;--accent:#ff6b5e;--th:#1c1e21}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,"Segoe UI","Noto Sans KR","Malgun Gothic",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:1.7rem;line-height:1.25;margin:.2em 0 .6em}h2{font-size:1.2rem;margin-top:1.8em}
+a{color:var(--accent)}nav{font-size:.9rem;color:var(--sub);margin-bottom:8px}nav a{margin-right:12px}
+.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.92rem;margin:1em 0}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--th)}
+code{background:var(--th);padding:1px 5px;border-radius:4px;font-size:.9em}
+footer{margin-top:3em;color:var(--sub);font-size:.85rem;border-top:1px solid var(--line);padding-top:12px}
+img{display:block;max-width:100%;height:auto;margin:1.2em auto .3em;border:1px solid var(--line);border-radius:8px}
+p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem;margin-bottom:1.2em}
+</style>
+</head>
+<body>
+<main>
+<nav><a href="../../">wavullet</a><a href="../">ExCluster</a><a href="../guide-ko/">한국어</a><a href="../privacy/">Privacy policy</a></nav>
+<h1>ExCluster user guide</h1>
+<p>ExCluster turns your phone into a classic car instrument cluster. This guide is for version 1.14. Items are named exactly as on the settings screens, so you can find them as you read.</p>
+<blockquote>
+<p><strong>Safety first.</strong> Mount the phone where it does not block your view or an airbag, and secure it so it cannot fall or slide when braking or on bumps. Do not operate the app while driving; change settings only when stopped.</p>
+</blockquote>
+<h2>1. Getting started</h2>
+<ol>
+<li>Mount the phone firmly in a holder.</li>
+<li>Open the app and tap <strong>Start</strong>. Allow the location (GPS) permission. The app uses location only while it is on the screen.</li>
+<li>A safety notice appears first. Read it and continue: the full-screen cluster starts and the screen stays on.</li>
+<li>To try it before using it in the car, tap <strong>Demo mode</strong>. It shows a simulated drive without GPS.</li>
+</ol>
+<h2>2. What you can do on the screen</h2>
+<p><img alt="Retro landscape cluster: the speedometer in the middle, small gauges on the left, RPM on the right, trips, clock and GPS below" src="img/cluster.png" />
+<em>Retro (landscape): the speedometer in the middle, the virtual RPM on the right, the acceleration, battery and temperature gauges on the left, and trips, clock and GPS state in the bottom row.</em></p>
+<p><img alt="Modern landscape screen: a big speed number and bar, battery and acceleration on the left, weather and trips on the right" src="img/modern.png" />
+<em>Modern (landscape): a big digital number and a speed bar. Every zone can be moved separately.</em></p>
+<ul>
+<li><strong>Open the settings:</strong> tap the gear icon at the top right, or press and hold the cluster for 0.8 s.</li>
+<li><strong>Reset trip A or B:</strong> press and hold the trip number for 1.5 s.</li>
+<li><strong>GPS state:</strong> a green "GPS" is normal; "EST" means GPS dropped out (for example in a tunnel) and the speed is being estimated from the motion sensors.</li>
+<li>The virtual RPM and gear indicator follow your speed for the feel of a classic cluster; they are unrelated to the real car.</li>
+<li>With Android Auto on, tapping the battery area switches between the phone's and the car's battery, and tapping the trip area switches between trips and the odometer.</li>
+</ul>
+<h2>3. Easy settings</h2>
+<p>The first page of the settings.</p>
+<p><img alt="Easy settings: theme, language, driving rotation, plate number, weekends, HUD mode" src="img/settings.png" />
+<em>The top of the easy settings. Further down: Sound, Detailed settings, Read the safety notice again, Copy test info.</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Theme</td>
+<td>Retro (analog needles) or Modern (digital numbers), each in landscape or portrait. The screen orientation follows the theme</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>Auto, Korean, English</td>
+</tr>
+<tr>
+<td>Driving rotation (Korea)</td>
+<td>Shows the Korean 5-day / 10-day no-driving-day badge next to the date, only on restricted days</td>
+</tr>
+<tr>
+<td>Last digit of plate number</td>
+<td>The number used for the rotation</td>
+</tr>
+<tr>
+<td>Exclude weekends</td>
+<td>Leaves out weekends for the date-based 5-day and 10-day rotation</td>
+</tr>
+<tr>
+<td>HUD mode (windshield)</td>
+<td>Mirrors the screen top to bottom so it reads correctly when the phone lies on the dash and reflects in the windshield</td>
+</tr>
+<tr>
+<td>Sound</td>
+<td>When on, Retro plays the engine and Modern plays your own sound, both following your driving. Off by default</td>
+</tr>
+<tr>
+<td>Detailed settings</td>
+<td>Opens section 4</td>
+</tr>
+<tr>
+<td>Read the safety notice again</td>
+<td>Shows the first-start safety notice again</td>
+</tr>
+<tr>
+<td>Copy test info</td>
+<td>Copies the app version, phone model, Android version and display settings (to paste into a question or test result; no location or personal data)</td>
+</tr>
+</tbody>
+</table></div>
+<h2>4. Detailed settings</h2>
+<p>Open them with <strong>Detailed settings</strong> on the easy page. The search field at the top finds an item by name or description.</p>
+<h3>Display</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Screen position &amp; size</td>
+<td>Goes to <strong>Adjust</strong> (section 5)</td>
+</tr>
+<tr>
+<td>Screen orientation</td>
+<td>Stays landscape whatever the system rotation setting. Pick a fixed side when the phone lies down for HUD</td>
+</tr>
+<tr>
+<td>Needle effects</td>
+<td>Speedo trail, RPM bounce, road vibration and digit shake over 100 km/h on or off</td>
+</tr>
+<tr>
+<td>Digits</td>
+<td>Size of the speed digits in the middle</td>
+</tr>
+<tr>
+<td>Background photo</td>
+<td>Modern theme. The photo is stored on this phone only</td>
+</tr>
+<tr>
+<td>Darken photo / Blur photo</td>
+<td>Darker for brighter photos, blur if you like</td>
+</tr>
+<tr>
+<td>Darker at night</td>
+<td>Halves the photo brightness after sunset</td>
+</tr>
+<tr>
+<td>Text backing</td>
+<td>Keeps text readable over a photo</td>
+</tr>
+<tr>
+<td>Widgets</td>
+<td>Choose which zones show on the Modern screen (speed is always shown)</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Driving</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Match car speedometer</td>
+<td>Car speedometers read high, so this lifts the app's display to match. Only the display changes; trips and logs use the true speed</td>
+</tr>
+<tr>
+<td>Offset full from</td>
+<td>At and above this speed the whole offset is added; below it grows linearly from 0 km/h</td>
+</tr>
+<tr>
+<td>Tire / Tire size</td>
+<td>For the virtual RPM. Enter the sidewall marking, for example 245/45R19</td>
+</tr>
+<tr>
+<td>Gearbox</td>
+<td>Gear ratios and shift points of the virtual RPM</td>
+</tr>
+<tr>
+<td>Motion sensor direction</td>
+<td>Default: phone upright with the screen facing you</td>
+</tr>
+<tr>
+<td>Learn mount direction</td>
+<td>Finds "forward" from GPS speed changes when you pull away or brake, so any phone angle works</td>
+</tr>
+<tr>
+<td>Glitch on speed when GPS drops</td>
+<td>In tunnels the number is a sensor estimate, shown with colour fringing and brief tears</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Speed camera alerts (Korea, off by default)</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Speed camera alerts (Korea)</td>
+<td>Shows and speaks fixed speed cameras and average-speed sections. It uses Korean police public data and works in Korea only</td>
+</tr>
+<tr>
+<td>Speak speed camera alerts</td>
+<td>Whether the alerts are spoken</td>
+</tr>
+<tr>
+<td>Speeding chime</td>
+<td>A short "ding" on every blink of the sign (1.6 s) while speeding. In a section only when the average is over the limit</td>
+</tr>
+<tr>
+<td>Voice alert timing</td>
+<td>The voice speaks a fixed camera 25 s (or 35 s) ahead at your current speed</td>
+</tr>
+<tr>
+<td>Camera display</td>
+<td>Small (a sign next to the speed) or Large (full screen)</td>
+</tr>
+<tr>
+<td>School-zone cameras (30 km/h)</td>
+<td>There are very many, so by default only above the limit</td>
+</tr>
+<tr>
+<td>Speed camera updates</td>
+<td>Wi-Fi and charging only by default; mobile data is optional (about 10 MB a time, usually once a month)</td>
+</tr>
+<tr>
+<td>Speed camera alert reports</td>
+<td>The list of alerts you reported as wrong: choose a type, send, delete</td>
+</tr>
+<tr>
+<td>Speed camera data</td>
+<td>Shows the data date and count; <strong>Update now</strong> downloads right away</td>
+</tr>
+</tbody>
+</table></div>
+<h3>HUD</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Top width / Height</td>
+<td>Slightly reshape the screen for the raked windshield (HUD mode only)</td>
+</tr>
+<tr>
+<td>Screen brightness</td>
+<td>Auto or fixed</td>
+</tr>
+<tr>
+<td>Brightness correction</td>
+<td>Shifts the auto brightness darker or brighter; HUD starts brighter because the windshield reflects little</td>
+</tr>
+<tr>
+<td>Fixed level</td>
+<td>The brightness used when fixed</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Sound</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Retro theme sound</td>
+<td>The engine sound or your own sound. The engine sound needs a moment the first time and uses about 75 MB of storage</td>
+</tr>
+<tr>
+<td>Choose my sound</td>
+<td>Uses a short part of an audio file you choose, changing with speed and acceleration</td>
+</tr>
+<tr>
+<td>Volume</td>
+<td>Up to 150%. Above 100% helps when navigation is much louder</td>
+</tr>
+<tr>
+<td>Silence when GPS is lost</td>
+<td>Quiet while there is no signal</td>
+</tr>
+<tr>
+<td>Do not lower other audio</td>
+<td>On: your music is left alone and the sound is mixed with it. Off: music is lowered only while the sound is audible</td>
+</tr>
+<tr>
+<td>Lower music for voice alerts</td>
+<td>Music gets quieter only while a speed-camera alert or overheating warning is spoken</td>
+</tr>
+<tr>
+<td>Check the voice</td>
+<td>Speaks one sentence in the phone's text-to-speech voice (change the voice in the phone settings)</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Car data</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Android Auto</td>
+<td>On: shows the car's odometer, battery and range on the cluster and uses the car speed as a back-up when GPS is lost. Off: no car data is read</td>
+</tr>
+<tr>
+<td>Car data status</td>
+<td>The state of the values received from the car</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Power &amp; heat</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dim at night &amp; in tunnels</td>
+<td>Lowers the text brightness after sunset or in a tunnel to cut glare</td>
+</tr>
+<tr>
+<td>Overheat guard</td>
+<td>Warns when the phone gets hot and, step by step, simplifies the screen and stops sound and logging. Keep it on for a dashboard in summer sun</td>
+</tr>
+<tr>
+<td>Running in the background</td>
+<td>GPS and sensors stop when the app leaves the screen and start again when you return</td>
+</tr>
+<tr>
+<td>Weather</td>
+<td>Rain and snow are judged from the precipitation of four forecast models; a forecast can differ from what you see</td>
+</tr>
+<tr>
+<td>Demo mode</td>
+<td>A simulated drive without GPS</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>Hidden menu (for developers and testers).</strong> Tapping "ExCluster v…" at the very bottom of the settings 7 times opens "Debug mode" and "Drive logs". They record speed and sensor values on the phone for analysing a problem. You do not need them normally.</p>
+</blockquote>
+<h2>5. Adjust (screen position and size)</h2>
+<p>In the detailed settings, tap <strong>Adjust</strong> under <strong>Screen position &amp; size</strong> to get the bar.</p>
+<p><img alt="The adjust bar: Done, Size and Digits sliders, Avoid the camera cutout, Swap battery / RPM gauges, info bar position and size" src="img/adjust.png" />
+<em>The adjust bar. The dashed line shows the area the cluster uses.</em></p>
+<ul>
+<li><strong>Drag to move, pinch to resize:</strong> fit the cluster to the area visible through the steering wheel.</li>
+<li><strong>Size / Digits:</strong> sliders for the whole cluster and the speed digits.</li>
+<li><strong>Info bar top or bottom, size:</strong> in the Retro theme, where the bottom row (trips, clock, GPS) goes and how big it is.</li>
+<li><strong>Avoid the camera cutout:</strong> by default the screen fills the whole display, camera cutout included. Turn this on if the cutout hides part of it.</li>
+<li><strong>Swap battery / RPM gauges (Retro):</strong> the small gauges (battery and others) and the RPM gauge trade places; in portrait the RPM goes to the top.</li>
+<li><strong>Modern theme:</strong> tap a zone name at the top (All, Speed, Time and so on) to move and resize each zone separately.</li>
+<li><strong>↕</strong> moves the bar up or down. <strong>Reset</strong> restores the position and size. <strong>Done</strong> saves.</li>
+</ul>
+<p><img alt="Retro portrait screen with the RPM at the top" src="img/portrait.png" />
+<em>Retro (portrait) with the gauges swapped: the RPM comes to the top.</em></p>
+<h2>6. Using the speed camera alerts</h2>
+<ol>
+<li>Turn on <strong>Speed camera alerts (Korea)</strong> in the detailed settings (off by default). The first time, the camera list is downloaded.</li>
+<li>A fixed camera appears on the screen from 1 km ahead and is spoken shortly before you reach it, scaled to your speed.</li>
+</ol>
+<p><img alt="Large fixed speed camera screen: a limit 80 sign, 750 m, the current speed" src="img/camera.png" />
+<em>A fixed speed camera: the limit, the distance to the camera and your speed.</em>
+3. In an average-speed section it shows your average, the distance and time left, and the speed you can still drive to keep the average under the limit.</p>
+<p><img alt="Large average-speed section screen: limit 60, average 55 km/h, 5 spare, distance and time left, allowed speed" src="img/section.png" />
+<em>An average-speed section: the average, the margin to the limit, the distance and time left, and the speed allowed for the rest.</em>
+4. On a large screen, tap the middle to close it and return to the normal cluster (until that camera or section is over).
+5. If an alert is wrong, tap <strong>Wrong alert</strong> once on the large screen. That camera is not announced again from the same direction. In the settings, <strong>Speed camera alert reports</strong> lets you review the reports, choose a type, send or delete them.</p>
+<blockquote>
+<p><strong>For reference only.</strong> Mobile enforcement is not announced, and no alert does not mean no enforcement. Without direction data, a camera on the other side may be announced. The driver is responsible for keeping to the speed limit.</p>
+</blockquote>
+<h2>7. Troubleshooting</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Problem</th>
+<th>What to try</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>The speed differs from the car's speedometer</td>
+<td>The app speed is GPS-based. Use <strong>Match car speedometer</strong> in the detailed settings</td>
+</tr>
+<tr>
+<td>The camera cutout hides part of the screen</td>
+<td>Turn on <strong>Avoid the camera cutout</strong> in Adjust</td>
+</tr>
+<tr>
+<td>The speed stays 0 or the GPS does not lock</td>
+<td>Check the location permission and the phone's location switch. Indoors and in tunnels it locks late</td>
+</tr>
+<tr>
+<td>No engine sound on Android Auto</td>
+<td>Turn <strong>Do not lower other audio</strong> on and off to compare. You can also raise the volume</td>
+</tr>
+<tr>
+<td>The engine sound is drowned out by navigation</td>
+<td>Raise <strong>Volume</strong> in the detailed settings (up to 150%)</td>
+</tr>
+<tr>
+<td>No speed camera alerts</td>
+<td>Check, in Korea, that <strong>Speed camera alerts</strong> is on and that <strong>Speed camera data</strong> has been downloaded</td>
+</tr>
+<tr>
+<td>The phone gets too hot</td>
+<td>Keep <strong>Overheat guard</strong> on, avoid direct sun and connect the charger only when needed</td>
+</tr>
+<tr>
+<td>Settings look different after an update</td>
+<td>Settings are stored on the phone and kept across updates</td>
+</tr>
+</tbody>
+</table></div>
+<p>Contact: wavullet@gmail.com</p>
+<footer>wavullet</footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ExCluster 사용 설명서</title>
+<meta name="description" content="ExCluster 안드로이드 앱 사용 설명서">
+<style>
+:root{--bg:#fff;--fg:#1c1e21;--sub:#5b6168;--line:#d9dde1;--accent:#c62828;--th:#f2f4f6}
+@media (prefers-color-scheme:dark){:root{--bg:#121315;--fg:#e8eaed;--sub:#9aa0a6;--line:#2c2f33;--accent:#ff6b5e;--th:#1c1e21}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,"Segoe UI","Noto Sans KR","Malgun Gothic",Roboto,sans-serif}
+main{max-width:860px;margin:0 auto;padding:24px 16px 64px}
+h1{font-size:1.7rem;line-height:1.25;margin:.2em 0 .6em}h2{font-size:1.2rem;margin-top:1.8em}
+a{color:var(--accent)}nav{font-size:.9rem;color:var(--sub);margin-bottom:8px}nav a{margin-right:12px}
+.table-wrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:.92rem;margin:1em 0}
+th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}th{background:var(--th)}
+code{background:var(--th);padding:1px 5px;border-radius:4px;font-size:.9em}
+footer{margin-top:3em;color:var(--sub);font-size:.85rem;border-top:1px solid var(--line);padding-top:12px}
+img{display:block;max-width:100%;height:auto;margin:1.2em auto .3em;border:1px solid var(--line);border-radius:8px}
+p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem;margin-bottom:1.2em}
+</style>
+</head>
+<body>
+<main>
+<nav><a href="../../">wavullet</a><a href="../">ExCluster</a><a href="../guide/">English</a><a href="../privacy-ko/">개인정보처리방침</a></nav>
+<h1>ExCluster 사용 설명서</h1>
+<p>스마트폰을 클래식 자동차 계기판처럼 쓰는 앱입니다. 이 설명서는 버전 1.14 기준입니다. 설정 화면의 글자와 같은 이름으로 적었으니 화면을 보면서 찾아 보세요.</p>
+<blockquote>
+<p><strong>안전 먼저.</strong> 폰은 시야나 에어백을 가리지 않는 곳에, 급제동이나 요철에도 떨어지지 않게 단단히 고정하세요. 운전 중에는 조작하지 말고, 설정은 정차 중에 바꾸세요.</p>
+</blockquote>
+<h2>1. 시작하기</h2>
+<ol>
+<li>폰을 거치대에 단단히 고정합니다.</li>
+<li>앱을 열고 <strong>시작</strong>을 누릅니다. 위치(GPS) 권한을 허용하세요. 앱이 화면에 있을 때만 위치를 씁니다.</li>
+<li>처음에는 안전 안내가 나옵니다. 읽고 계속하면 전체 화면 계기판이 켜지고 화면이 꺼지지 않게 유지됩니다.</li>
+<li>차에서 쓰기 전에 써 보고 싶으면 <strong>데모 모드</strong>를 누르세요. GPS 없이 가상으로 달리는 화면을 보여 줍니다.</li>
+</ol>
+<h2>2. 화면에서 하는 일</h2>
+<p><img alt="레트로 가로 계기판: 가운데 속도계, 왼쪽에 배터리 등 작은 계기, 오른쪽에 RPM, 아래에 트립·시계·GPS" src="img/cluster.png" />
+<em>레트로(가로): 가운데가 속도계, 오른쪽이 가상 RPM, 왼쪽이 가속·배터리·온도 계기이고 아래 줄에 트립, 시계, GPS 상태가 있습니다.</em></p>
+<p><img alt="모던 가로 화면: 큰 속도 숫자와 속도 바, 왼쪽에 배터리와 가속, 오른쪽에 날씨와 트립" src="img/modern.png" />
+<em>모던(가로): 큰 디지털 숫자와 속도 바. 구역마다 따로 옮길 수 있습니다.</em></p>
+<ul>
+<li><strong>설정 열기:</strong> 오른쪽 위 톱니 아이콘을 누르거나 계기판을 0.8초 길게 누릅니다.</li>
+<li><strong>트립 A·B 거리 0으로:</strong> 트립 숫자를 1.5초 길게 누릅니다.</li>
+<li><strong>GPS 상태:</strong> 초록색 "GPS"는 정상, "EST"는 터널 등에서 GPS가 끊겨 센서로 속도를 추정 중이라는 뜻입니다.</li>
+<li>가상 RPM과 변속 표시는 속도에 맞춰 움직이는 장식이고, 실제 차의 값과는 무관합니다.</li>
+<li>안드로이드 오토를 켠 경우 배터리 부분을 누르면 폰 배터리와 차 배터리가 바뀌고, 트립 부분을 누르면 트립과 주행거리가 바뀝니다.</li>
+</ul>
+<h2>3. 쉬운 설정</h2>
+<p>설정 화면 첫 페이지입니다.</p>
+<p><img alt="쉬운 설정: 테마, 언어, 부제 규칙, 차량번호 끝자리, 주말 제외, HUD 모드" src="img/settings.png" />
+<em>쉬운 설정의 첫 부분입니다. 아래로 내리면 소리, 상세 설정 열기, 안전 안내 다시 보기, 테스트 정보 복사가 있습니다.</em></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>테마</td>
+<td>레트로(아날로그 바늘) 또는 모던(디지털 숫자), 각각 가로와 세로. 화면 방향도 테마를 따라 바뀝니다</td>
+</tr>
+<tr>
+<td>언어</td>
+<td>자동, 한국어, English</td>
+</tr>
+<tr>
+<td>부제 규칙</td>
+<td>한국의 5부제·10부제 운행 제한일에만 날짜 옆에 표시합니다</td>
+</tr>
+<tr>
+<td>차량번호 끝자리</td>
+<td>부제 계산에 쓰는 숫자입니다</td>
+</tr>
+<tr>
+<td>주말 제외</td>
+<td>날짜 기준 5부제와 10부제에서 주말을 뺍니다</td>
+</tr>
+<tr>
+<td>HUD 모드 (앞유리 반사)</td>
+<td>폰을 대시보드에 눕혀 앞유리에 비춰 보도록 화면을 위아래로 뒤집습니다</td>
+</tr>
+<tr>
+<td>소리</td>
+<td>켜면 레트로는 엔진 소리, 모던은 내 소리가 주행에 맞춰 납니다. 기본은 꺼짐</td>
+</tr>
+<tr>
+<td>상세 설정 열기</td>
+<td>아래 4번의 세부 설정으로 갑니다</td>
+</tr>
+<tr>
+<td>안전 안내 다시 보기</td>
+<td>처음에 본 안전 안내를 다시 읽습니다</td>
+</tr>
+<tr>
+<td>테스트 정보 복사</td>
+<td>앱 버전, 폰 기종, 안드로이드 버전, 화면 설정을 복사합니다(문의나 테스트 결과에 붙여넣기용, 위치·개인 정보 없음)</td>
+</tr>
+</tbody>
+</table></div>
+<h2>4. 상세 설정</h2>
+<p><strong>쉬운 설정의 "상세 설정 열기"</strong>로 들어갑니다. 위쪽 검색 칸에서 항목 이름이나 설명으로 찾을 수 있습니다.</p>
+<h3>화면</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>화면 위치·크기</td>
+<td><strong>조정하기</strong>로 갑니다(아래 5번)</td>
+</tr>
+<tr>
+<td>화면 방향</td>
+<td>시스템 회전 설정과 관계없이 가로로 고정합니다. HUD로 눕혀 쓸 때는 한쪽 고정을 권장합니다</td>
+</tr>
+<tr>
+<td>바늘 효과</td>
+<td>속도계 잔상, RPM 반동, 노면 진동, 100 km/h 이상 숫자 떨림을 켜고 끕니다</td>
+</tr>
+<tr>
+<td>숫자</td>
+<td>가운데 속도 숫자 크기</td>
+</tr>
+<tr>
+<td>배경 사진</td>
+<td>모던 테마의 배경 사진. 사진은 이 폰에만 저장됩니다</td>
+</tr>
+<tr>
+<td>사진 어둡게 / 사진 흐림</td>
+<td>밝은 사진일수록 어둡게, 필요하면 흐리게</td>
+</tr>
+<tr>
+<td>밤에 자동으로 어둡게</td>
+<td>해가 진 뒤 사진 밝기를 절반으로</td>
+</tr>
+<tr>
+<td>글씨 배경</td>
+<td>사진 위에서도 글씨가 잘 보이게</td>
+</tr>
+<tr>
+<td>위젯 표시</td>
+<td>모던 화면에서 보일 구역을 고릅니다(속도는 항상 표시)</td>
+</tr>
+</tbody>
+</table></div>
+<h3>주행</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>계기판 맞춤 보정</td>
+<td>차 계기판은 실제 속도보다 높게 표시돼서, 앱 표시를 계기판에 맞춥니다. 표시만 바뀌고 트립과 기록은 실제 속도입니다</td>
+</tr>
+<tr>
+<td>보정 기준 속도</td>
+<td>이 속도 이상에서는 보정값 전체를 더하고, 그 아래는 0 km/h부터 직선으로 늘립니다</td>
+</tr>
+<tr>
+<td>타이어 / 타이어 규격</td>
+<td>가상 RPM 계산용입니다. 타이어 옆면 표기(예: 245/45R19)를 입력합니다</td>
+</tr>
+<tr>
+<td>변속기</td>
+<td>가상 RPM의 기어비와 변속 시점을 고릅니다</td>
+</tr>
+<tr>
+<td>가속 센서 방향</td>
+<td>폰을 세워 화면이 운전석을 향하면 기본값입니다</td>
+</tr>
+<tr>
+<td>거치 방향 자동 학습</td>
+<td>출발·제동 때 GPS 속도 변화로 전방을 찾아서 폰을 어떤 각도로 놓아도 가속을 읽습니다</td>
+</tr>
+<tr>
+<td>GPS 끊기면 속도 숫자 글리치</td>
+<td>터널에서 센서 추정값이라는 것을 색 번짐과 짧은 화면 찢김으로 알려 줍니다</td>
+</tr>
+</tbody>
+</table></div>
+<h3>단속 카메라 안내 (한국, 기본 꺼짐)</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>단속 카메라 안내 (한국)</td>
+<td>고정식 카메라와 구간단속을 화면과 음성으로 알려 줍니다. 경찰청 공공데이터를 쓰고 한국에서만 동작합니다</td>
+</tr>
+<tr>
+<td>단속 카메라 음성 안내</td>
+<td>음성으로 알려 줄지</td>
+</tr>
+<tr>
+<td>과속 경고음</td>
+<td>과속이면 표지판이 깜박이는 주기(1.6초)마다 "띵" 소리가 납니다. 구간단속은 평균이 제한을 넘을 때만입니다</td>
+</tr>
+<tr>
+<td>음성 안내 시점</td>
+<td>고정식 카메라를 현재 속도로 25초(또는 35초) 앞에서 알려 줍니다</td>
+</tr>
+<tr>
+<td>단속 표시</td>
+<td>작게(속도 옆 표지판) 또는 크게(전체 화면)</td>
+</tr>
+<tr>
+<td>어린이보호구역 카메라 (30 km/h)</td>
+<td>수가 많아서 기본은 제한속도를 넘을 때만 알려 줍니다</td>
+</tr>
+<tr>
+<td>단속 카메라 정보 업데이트</td>
+<td>기본은 Wi-Fi·충전 중에만, 모바일 데이터로도 받을 수 있습니다(한 번에 약 10 MB, 보통 한 달에 한 번)</td>
+</tr>
+<tr>
+<td>단속 안내 신고</td>
+<td>잘못된 안내로 신고한 목록. 종류 선택, 보내기, 삭제</td>
+</tr>
+<tr>
+<td>단속 카메라 데이터</td>
+<td>데이터 날짜와 개수를 보여 주고 <strong>지금 받기</strong>로 바로 업데이트합니다</td>
+</tr>
+</tbody>
+</table></div>
+<h3>HUD</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>위쪽 폭 / 높이</td>
+<td>앞유리 경사에 맞게 화면 모양을 조금 보정합니다(HUD 모드를 켠 때만)</td>
+</tr>
+<tr>
+<td>화면 밝기</td>
+<td>자동 또는 고정</td>
+</tr>
+<tr>
+<td>밝기 보정</td>
+<td>자동 밝기를 전체적으로 어둡게·밝게 옮깁니다. HUD는 앞유리 반사 때문에 더 밝게 시작합니다</td>
+</tr>
+<tr>
+<td>고정 밝기</td>
+<td>고정으로 쓸 때의 밝기</td>
+</tr>
+</tbody>
+</table></div>
+<h3>소리</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>레트로 테마 소리</td>
+<td>엔진 소리 또는 내 소리. 엔진 소리는 처음 켤 때 잠시 준비하고 저장 공간을 약 75 MB 씁니다</td>
+</tr>
+<tr>
+<td>내 소리 고르기</td>
+<td>내가 가진 음원의 짧은 구간을 속도와 가속에 따라 변하는 소리로 씁니다</td>
+</tr>
+<tr>
+<td>소리 크기</td>
+<td>최대 150%. 100%를 넘기면 내비 안내가 훨씬 클 때 도움이 됩니다</td>
+</tr>
+<tr>
+<td>GPS 끊기면 소리 끄기</td>
+<td>신호가 없을 때는 조용히</td>
+</tr>
+<tr>
+<td>다른 소리를 줄이지 않기</td>
+<td>켜면 음악을 그대로 두고 섞어 내보냅니다. 끄면 이 소리가 날 때만 음악이 작아집니다</td>
+</tr>
+<tr>
+<td>음성 안내 때 음악 줄이기</td>
+<td>단속 안내·과열 경고를 말하는 동안만 음악이 잠깐 작아집니다</td>
+</tr>
+<tr>
+<td>목소리 확인</td>
+<td>폰의 텍스트 음성 변환 목소리로 한 문장을 말해 봅니다(목소리는 폰 설정에서 바꿉니다)</td>
+</tr>
+</tbody>
+</table></div>
+<h3>차량 데이터</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>안드로이드 오토</td>
+<td>켜면 차의 주행거리, 배터리, 주행 가능 거리를 계기판에 보여 주고 GPS가 끊길 때 차 속도를 보조로 씁니다. 끄면 차 데이터를 받지 않습니다</td>
+</tr>
+<tr>
+<td>차 데이터 상태</td>
+<td>차에서 받는 값의 상태</td>
+</tr>
+</tbody>
+</table></div>
+<h3>전원·발열</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>항목</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>밤·터널에 계기판 어둡게</td>
+<td>해가 진 뒤나 터널에서 글씨 밝기를 낮춰 눈부심을 줄입니다</td>
+</tr>
+<tr>
+<td>과열 보호</td>
+<td>폰이 뜨거워지면 경고하고 단계에 따라 화면을 단순하게 하며 소리·기록을 멈춥니다. 여름 낮 대시보드에서 쓸 때 켜 두세요</td>
+</tr>
+<tr>
+<td>백그라운드 실행</td>
+<td>앱이 화면에서 벗어나면 GPS와 센서를 멈추고 돌아오면 다시 시작합니다</td>
+</tr>
+<tr>
+<td>날씨</td>
+<td>네 가지 예보 모델의 강수량으로 비·눈을 판단합니다. 예보라서 실제와 다를 수 있습니다</td>
+</tr>
+<tr>
+<td>데모 모드</td>
+<td>GPS 없이 가상 주행을 보여 줍니다</td>
+</tr>
+</tbody>
+</table></div>
+<blockquote>
+<p><strong>숨은 메뉴(개발자·테스트용).</strong> 설정 맨 아래의 "ExCluster v…" 글자를 7번 누르면 "디버그 모드"와 "주행 로그"가 열립니다. 속도와 센서 값을 폰에 기록해서 문제를 분석할 때 씁니다. 평소에는 필요 없습니다.</p>
+</blockquote>
+<h2>5. 조정하기 (화면 위치·크기)</h2>
+<p>상세 설정의 <strong>화면 위치·크기</strong>에서 <strong>조정하기</strong>를 누르면 아래 막대가 나옵니다.</p>
+<p><img alt="조정하기 막대: 완료, 크기와 숫자 슬라이더, 카메라 구멍 피하기, 배터리·RPM 계기 자리 바꾸기, 정보 바 위치와 크기" src="img/adjust.png" />
+<em>조정하기 막대. 점선은 계기판이 차지하는 영역입니다.</em></p>
+<ul>
+<li><strong>끌어서 이동, 두 손가락으로 크기 조절:</strong> 스티어링 휠 사이로 보이는 영역에 맞춥니다.</li>
+<li><strong>크기 / 숫자:</strong> 슬라이더로 전체 크기와 가운데 숫자 크기를 정합니다.</li>
+<li><strong>정보 바 위·아래, 크기:</strong> 레트로 테마에서 아래쪽 트립·시계·GPS 줄의 위치와 크기를 고릅니다.</li>
+<li><strong>카메라 구멍 피하기:</strong> 화면은 기본으로 폰의 카메라 구멍까지 꽉 차게 나옵니다. 구멍에 가려지는 부분이 있으면 켜세요.</li>
+<li><strong>배터리·RPM 계기 자리 바꾸기(레트로):</strong> 작은 계기 묶음(배터리 등)과 RPM 계기의 자리를 바꿉니다. 세로 화면에서는 RPM이 위로 올라옵니다.</li>
+<li><strong>모던 테마:</strong> 위쪽의 구역 이름(전체, 속도, 시간 등)을 눌러 구역마다 따로 옮기고 크기를 바꿉니다.</li>
+<li><strong>↕:</strong> 조정 막대를 위나 아래로 옮깁니다. <strong>초기화</strong>로 위치와 크기를 원래대로 돌립니다. <strong>완료</strong>로 저장합니다.</li>
+</ul>
+<p><img alt="레트로 세로 화면에서 RPM이 맨 위에 있는 모습" src="img/portrait.png" />
+<em>레트로(세로)에서 계기 자리를 바꾸면 RPM이 맨 위로 올라옵니다.</em></p>
+<h2>6. 단속 카메라 안내 쓰는 법</h2>
+<ol>
+<li>상세 설정의 <strong>단속 카메라 안내 (한국)</strong>를 켭니다(기본 꺼짐). 처음 켜면 카메라 목록을 받습니다.</li>
+<li>가까워지면 고정식 카메라가 1 km 앞부터 화면에 나오고, 속도에 맞춰 앞에서 음성으로 알려 줍니다.</li>
+</ol>
+<p><img alt="고정식 단속 카메라 큰 화면: 제한속도 80 표지판, 750 m, 현재 속도" src="img/camera.png" />
+<em>고정식 단속 카메라: 제한속도, 카메라까지 거리, 현재 속도.</em>
+3. 구간단속은 구간에 들어가면 평균 속도, 남은 거리와 시간, 남은 구간에서 허용되는 속도를 보여 줍니다.</p>
+<p><img alt="구간단속 큰 화면: 제한 60, 평균 55 km/h, 여유 5, 남은 거리와 시간, 허용 속도" src="img/section.png" />
+<em>구간단속: 평균 속도, 제한과의 차이, 남은 거리·시간, 남은 구간에서 허용되는 속도.</em>
+4. 큰 화면은 가운데를 누르면 닫혀 일반 계기판으로 돌아옵니다(그 카메라나 구간이 끝날 때까지).
+5. 안내가 틀렸으면 큰 화면의 <strong>잘못된 안내</strong> 버튼을 한 번 누르세요. 그 방향에서는 그 카메라를 다시 알려 주지 않습니다. 설정의 <strong>단속 안내 신고</strong>에서 신고를 보고 종류를 고르거나 보내거나 지울 수 있습니다.</p>
+<blockquote>
+<p><strong>참고용입니다.</strong> 이동식 단속은 알려 주지 않고, 안내가 없다고 단속이 없는 것은 아닙니다. 방향 정보가 없어서 반대편 카메라가 안내될 수 있습니다. 제한속도는 운전자가 직접 지켜 주세요.</p>
+</blockquote>
+<h2>7. 문제 해결</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>증상</th>
+<th>해 볼 것</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>속도가 차 계기판과 다르다</td>
+<td>앱 속도는 GPS 기준입니다. 상세 설정의 <strong>계기판 맞춤 보정</strong>으로 맞춥니다</td>
+</tr>
+<tr>
+<td>화면이 카메라 구멍에 가린다</td>
+<td>조정하기에서 <strong>카메라 구멍 피하기</strong>를 켭니다</td>
+</tr>
+<tr>
+<td>속도가 0이거나 GPS 표시가 안 잡힌다</td>
+<td>위치 권한과 폰의 위치 기능을 확인하세요. 건물 안이나 터널에서는 늦게 잡힙니다</td>
+</tr>
+<tr>
+<td>안드로이드 오토에서 엔진 소리가 안 들린다</td>
+<td><strong>다른 소리를 줄이지 않기</strong>를 켜고 꺼서 비교해 보세요. 소리 크기를 올릴 수도 있습니다</td>
+</tr>
+<tr>
+<td>내비 안내가 나올 때 엔진 소리가 묻힌다</td>
+<td>상세 설정의 <strong>소리 크기</strong>를 올리세요(최대 150%)</td>
+</tr>
+<tr>
+<td>단속 안내가 나오지 않는다</td>
+<td>한국 안에서 <strong>단속 카메라 안내</strong>가 켜져 있는지, <strong>단속 카메라 데이터</strong>가 받아졌는지 확인하세요</td>
+</tr>
+<tr>
+<td>폰이 너무 뜨거워진다</td>
+<td><strong>과열 보호</strong>를 켜 두세요. 직사광선을 피하고 충전기는 필요할 때만 연결하세요</td>
+</tr>
+<tr>
+<td>앱을 바꾼 뒤 설정이 달라 보인다</td>
+<td>설정은 폰에 저장되어 있고 업데이트해도 유지됩니다</td>
+</tr>
+</tbody>
+</table></div>
+<p>문의: wavullet@gmail.com</p>
+<footer>wavullet</footer>
+</main>
+</body>
+</html>
