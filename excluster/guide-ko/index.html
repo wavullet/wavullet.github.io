@@ -126,10 +126,6 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <td>속도계 잔상, RPM 반동, 노면 진동, 100 km/h 이상 숫자 떨림을 켜고 끕니다</td>
 </tr>
 <tr>
-<td>숫자</td>
-<td>가운데 속도 숫자 크기</td>
-</tr>
-<tr>
 <td>배경 사진</td>
 <td>모던 테마의 배경 사진. 사진은 이 폰에만 저장됩니다</td>
 </tr>
@@ -187,53 +183,6 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <tr>
 <td>GPS 끊기면 속도 숫자 글리치</td>
 <td>터널에서 센서 추정값이라는 것을 색 번짐과 짧은 화면 찢김으로 알려 줍니다</td>
-</tr>
-</tbody>
-</table></div>
-<h3>단속 카메라 안내 (한국, 기본 꺼짐)</h3>
-<div class="table-wrap"><table>
-<thead>
-<tr>
-<th>항목</th>
-<th>하는 일</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>단속 카메라 안내 (한국)</td>
-<td>고정식 카메라와 구간단속을 화면과 음성으로 알려 줍니다. 경찰청 공공데이터를 쓰고 한국에서만 동작합니다</td>
-</tr>
-<tr>
-<td>단속 카메라 음성 안내</td>
-<td>음성으로 알려 줄지</td>
-</tr>
-<tr>
-<td>과속 경고음</td>
-<td>과속이면 표지판이 깜박이는 주기(1.6초)마다 "띵" 소리가 납니다. 구간단속은 평균이 제한을 넘을 때만입니다</td>
-</tr>
-<tr>
-<td>음성 안내 시점</td>
-<td>고정식 카메라를 현재 속도로 25초(또는 35초) 앞에서 알려 줍니다</td>
-</tr>
-<tr>
-<td>단속 표시</td>
-<td>작게(속도 옆 표지판) 또는 크게(전체 화면)</td>
-</tr>
-<tr>
-<td>어린이보호구역 카메라 (30 km/h)</td>
-<td>수가 많아서 기본은 제한속도를 넘을 때만 알려 줍니다</td>
-</tr>
-<tr>
-<td>단속 카메라 정보 업데이트</td>
-<td>기본은 Wi-Fi·충전 중에만, 모바일 데이터로도 받을 수 있습니다(한 번에 약 10 MB, 보통 한 달에 한 번)</td>
-</tr>
-<tr>
-<td>단속 안내 신고</td>
-<td>잘못된 안내로 신고한 목록. 종류 선택, 보내기, 삭제</td>
-</tr>
-<tr>
-<td>단속 카메라 데이터</td>
-<td>데이터 날짜와 개수를 보여 주고 <strong>지금 받기</strong>로 바로 업데이트합니다</td>
 </tr>
 </tbody>
 </table></div>
@@ -295,7 +244,7 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 </tr>
 <tr>
 <td>음성 안내 때 음악 줄이기</td>
-<td>단속 안내·과열 경고를 말하는 동안만 음악이 잠깐 작아집니다</td>
+<td>과열 경고를 말하는 동안만 음악이 잠깐 작아집니다</td>
 </tr>
 <tr>
 <td>목소리 확인</td>
@@ -349,7 +298,7 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 </tr>
 <tr>
 <td>데모 모드</td>
-<td>GPS 없이 가상 주행을 보여 줍니다</td>
+<td>GPS 없이 가상 주행을 보여 줍니다. 켜져 있는 동안 화면에 흐린 "DEMO" 글자가 보입니다. <strong>크루즈</strong> 버튼은 지금 속도를 유지하고, <strong>+5 / −5</strong>는 5의 배수로 올리고 내립니다</td>
 </tr>
 </tbody>
 </table></div>
@@ -357,12 +306,12 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <p><strong>숨은 메뉴(개발자·테스트용).</strong> 설정 맨 아래의 "ExCluster v…" 글자를 7번 누르면 "디버그 모드"와 "주행 로그"가 열립니다. 속도와 센서 값을 폰에 기록해서 문제를 분석할 때 씁니다. 평소에는 필요 없습니다.</p>
 </blockquote>
 <h2>5. 조정하기 (화면 위치·크기)</h2>
-<p>상세 설정의 <strong>화면 위치·크기</strong>에서 <strong>조정하기</strong>를 누르면 아래 막대가 나옵니다.</p>
+<p>상세 설정의 <strong>화면 위치·크기</strong>에서 <strong>조정하기</strong>를 누르면 아래 막대가 나옵니다. 바꾼 설정이 저장되지 않은 상태라면 "저장하고 조정할까요?"라고 물어보고, 저장한 뒤 바로 조정을 엽니다.</p>
 <p><img alt="조정하기 막대: 완료, 크기와 숫자 슬라이더, 카메라 구멍 피하기, 배터리·RPM 계기 자리 바꾸기, 정보 바 위치와 크기" src="img/adjust.png" />
 <em>조정하기 막대. 점선은 계기판이 차지하는 영역입니다.</em></p>
 <ul>
 <li><strong>끌어서 이동, 두 손가락으로 크기 조절:</strong> 스티어링 휠 사이로 보이는 영역에 맞춥니다.</li>
-<li><strong>크기 / 숫자:</strong> 슬라이더로 전체 크기와 가운데 숫자 크기를 정합니다.</li>
+<li><strong>크기 / 숫자:</strong> 슬라이더로 전체 크기와 속도 숫자 크기를 정합니다(모던 테마에서는 속도 구역 크기).</li>
 <li><strong>정보 바 위·아래, 크기:</strong> 레트로 테마에서 아래쪽 트립·시계·GPS 줄의 위치와 크기를 고릅니다.</li>
 <li><strong>카메라 구멍 피하기:</strong> 화면은 기본으로 폰의 카메라 구멍까지 꽉 차게 나옵니다. 구멍에 가려지는 부분이 있으면 켜세요.</li>
 <li><strong>배터리·RPM 계기 자리 바꾸기(레트로):</strong> 작은 계기 묶음(배터리 등)과 RPM 계기의 자리를 바꿉니다. 세로 화면에서는 RPM이 위로 올라옵니다.</li>
@@ -371,22 +320,7 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 </ul>
 <p><img alt="레트로 세로 화면에서 RPM이 맨 위에 있는 모습" src="img/portrait.png" />
 <em>레트로(세로)에서 계기 자리를 바꾸면 RPM이 맨 위로 올라옵니다.</em></p>
-<h2>6. 단속 카메라 안내 쓰는 법</h2>
-<ol>
-<li>상세 설정의 <strong>단속 카메라 안내 (한국)</strong>를 켭니다(기본 꺼짐). 처음 켜면 카메라 목록을 받습니다.</li>
-<li>가까워지면 고정식 카메라가 1 km 앞부터 화면에 나오고, 속도에 맞춰 앞에서 음성으로 알려 줍니다.</li>
-</ol>
-<p><img alt="고정식 단속 카메라 큰 화면: 제한속도 80 표지판, 750 m, 현재 속도" src="img/camera.png" />
-<em>고정식 단속 카메라: 제한속도, 카메라까지 거리, 현재 속도.</em>
-3. 구간단속은 구간에 들어가면 평균 속도, 남은 거리와 시간, 남은 구간에서 허용되는 속도를 보여 줍니다.</p>
-<p><img alt="구간단속 큰 화면: 제한 60, 평균 55 km/h, 여유 5, 남은 거리와 시간, 허용 속도" src="img/section.png" />
-<em>구간단속: 평균 속도, 제한과의 차이, 남은 거리·시간, 남은 구간에서 허용되는 속도.</em>
-4. 큰 화면은 가운데를 누르면 닫혀 일반 계기판으로 돌아옵니다(그 카메라나 구간이 끝날 때까지).
-5. 안내가 틀렸으면 큰 화면의 <strong>잘못된 안내</strong> 버튼을 한 번 누르세요. 그 방향에서는 그 카메라를 다시 알려 주지 않습니다. 설정의 <strong>단속 안내 신고</strong>에서 신고를 보고 종류를 고르거나 보내거나 지울 수 있습니다.</p>
-<blockquote>
-<p><strong>참고용입니다.</strong> 이동식 단속은 알려 주지 않고, 안내가 없다고 단속이 없는 것은 아닙니다. 방향 정보가 없어서 반대편 카메라가 안내될 수 있습니다. 제한속도는 운전자가 직접 지켜 주세요.</p>
-</blockquote>
-<h2>7. 문제 해결</h2>
+<h2>6. 문제 해결</h2>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -414,10 +348,6 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <tr>
 <td>내비 안내가 나올 때 엔진 소리가 묻힌다</td>
 <td>상세 설정의 <strong>소리 크기</strong>를 올리세요(최대 150%)</td>
-</tr>
-<tr>
-<td>단속 안내가 나오지 않는다</td>
-<td>한국 안에서 <strong>단속 카메라 안내</strong>가 켜져 있는지, <strong>단속 카메라 데이터</strong>가 받아졌는지 확인하세요</td>
 </tr>
 <tr>
 <td>폰이 너무 뜨거워진다</td>
