@@ -42,7 +42,7 @@ the table says otherwise.</p>
 <td>Precise location (GPS)</td>
 <td>Speed, trip distance, GPS state; the current position's weather</td>
 <td>Only for the weather request: latitude and longitude rounded to 3 decimals (about 100 m) go to Open-Meteo (open-meteo.com)</td>
-<td>Not stored (see "Drive log" for the optional route)</td>
+<td>Not stored, except by the optional "Record drive routes" and the hidden drive log (below)</td>
 </tr>
 <tr>
 <td>Motion sensors (accelerometer, gyroscope)</td>
@@ -75,9 +75,9 @@ the table says otherwise.</p>
 <td>Only the 5 to 10 second part you choose is kept, in the app's private storage (not the whole file); you can delete it in the app, and it is excluded from backups and device transfers</td>
 </tr>
 <tr>
-<td>Spoken speed (optional, off by default)</td>
-<td>Says your current speed every few minutes while you drive</td>
-<td>The sentence (for example "Current speed 80 kilometers per hour") is handed to the text-to-speech engine installed on the phone; the app itself sends nothing. If that engine uses an online voice, its own privacy policy applies</td>
+<td>Spoken warnings (overheat warning, "Check the voice" in the settings)</td>
+<td>Says a warning when the phone gets hot</td>
+<td>The sentence (for example "The phone is very hot") is handed to the text-to-speech engine installed on the phone; the app itself sends nothing. If that engine uses an online voice, its own privacy policy applies</td>
 <td>No</td>
 </tr>
 <tr>
@@ -93,22 +93,28 @@ the table says otherwise.</p>
 <td>On the phone</td>
 </tr>
 <tr>
+<td>"Record drive routes" (Detailed settings, off by default)</td>
+<td>Lists your trips (distance, time, highest and average speed) and lets you open a trip in a map app</td>
+<td>Only if you share a trip yourself (share sheet, GPX or KML file); the app asks first and says the file holds the whole route, start and end included</td>
+<td>On the phone only: the route of each trip (latitude, longitude, time and speed, one point every few seconds while moving). Not in the phone's backup or device transfer. Trips older than the chosen number of days (default 30) are deleted automatically, and you can delete one or all in the app</td>
+</tr>
+<tr>
 <td>Drive log (hidden debug mode, off by default)</td>
 <td>Analysing speed accuracy</td>
 <td>Only if you export it yourself (share sheet)</td>
-<td>On the phone: speed, sensor values (including the ambient light), satellite counts and timings. <strong>Latitude / longitude are written only if you switch on "Record route"</strong> (off by default); the export can leave them out. Logs older than the chosen number of days (default 14) are deleted automatically</td>
+<td>On the phone: speed, sensor values (including the ambient light), satellite counts and timings. <strong>Latitude / longitude are written only if you switch on "Record route (location)" in the hidden menu</strong> (off by default; separate from "Record drive routes" above); the export can leave them out. Logs older than the chosen number of days (default 14) are deleted automatically</td>
 </tr>
 </tbody>
 </table></div>
 <ul>
-<li>Debug logs, the car-data file and the "My sound" clip are excluded from Android backups and device transfers.</li>
+<li>Recorded drive routes, debug logs, the car-data file and the "My sound" clip are excluded from Android backups and device transfers.</li>
 <li>You can turn location off in the phone's settings at any time; the app then cannot show speed. Delete the app (or its data)
-  to remove everything it stored; the drive log screen can also delete sessions.</li>
+  to remove everything it stored; the route list and the drive log screen can also delete trips and sessions.</li>
 <li>Weather: the request contains only the rounded coordinates, no identifier. Open-Meteo's own policy applies to it.</li>
 <li>Children: the app is not directed at children.</li>
 <li>Contact: wavullet@gmail.com</li>
 </ul>
-<p>Effective date: 2026-11-21</p>
+<p>Effective date: 2026-11-25</p>
 <footer>wavullet</footer>
 </main>
 </body>
