@@ -25,7 +25,7 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <main>
 <nav><a href="../../">wavullet</a><a href="../">ExCluster</a><a href="../guide-ko/">한국어</a><a href="../privacy/">Privacy policy</a></nav>
 <h1>ExCluster user guide</h1>
-<p>ExCluster turns your phone into a classic car instrument cluster. This guide is for version 1.14. Items are named exactly as on the settings screens, so you can find them as you read.</p>
+<p>ExCluster turns your phone into a classic car instrument cluster. This guide is for version 1.20. Items are named exactly as on the settings screens, so you can find them as you read.</p>
 <blockquote>
 <p><strong>Safety first.</strong> Mount the phone where it does not block your view or an airbag, and secure it so it cannot fall or slide when braking or on bumps. Do not operate the app while driving; change settings only when stopped.</p>
 </blockquote>
@@ -51,7 +51,9 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <h2>3. Easy settings</h2>
 <p>The first page of the settings.</p>
 <p><img alt="Easy settings: theme, language, driving rotation, plate number, weekends, HUD mode" src="img/settings.png" />
-<em>The top of the easy settings. Further down: Sound, Detailed settings, Read the safety notice again, Copy test info.</em></p>
+<em>The top of the easy settings.</em></p>
+<p><img alt="Easy settings, lower part: Sound, Demo mode, Detailed settings, Copy test info" src="img/settings2.png" />
+<em>Further down: Sound, Demo mode, Detailed settings, Read the safety notice again (below), Copy test info.</em></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -66,7 +68,7 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 </tr>
 <tr>
 <td>Language</td>
-<td>Auto, Korean, English</td>
+<td>Korean or English. On the first start the app follows the phone's language</td>
 </tr>
 <tr>
 <td>Driving rotation (Korea)</td>
@@ -87,6 +89,10 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <tr>
 <td>Sound</td>
 <td>When on, Retro plays the engine and Modern plays your own sound, both following your driving. Off by default</td>
+</tr>
+<tr>
+<td>Demo mode</td>
+<td>A simulated drive without GPS, for trying the app without a car. A faint "DEMO" shows on the screen while it is on (see also section 4, Power &amp; heat)</td>
 </tr>
 <tr>
 <td>Detailed settings</td>
@@ -115,7 +121,7 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <tbody>
 <tr>
 <td>Screen position &amp; size</td>
-<td>Goes to <strong>Adjust</strong> (section 5)</td>
+<td>Goes to <strong>Adjust</strong> (section 6)</td>
 </tr>
 <tr>
 <td>Screen orientation</td>
@@ -303,30 +309,57 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <td>Rain and snow are judged from the precipitation of four forecast models; a forecast can differ from what you see</td>
 </tr>
 <tr>
+<td>Record drive routes</td>
+<td>Records where you drive on this phone and shares it as a GPX / KML file (section 5). Off by default</td>
+</tr>
+<tr>
+<td>Keep routes for / Recorded routes</td>
+<td>How long a route is kept (default 30 days), the list of routes</td>
+</tr>
+<tr>
 <td>Demo mode</td>
-<td>A simulated drive without GPS. A faint "DEMO" shows on the screen while it is on. <strong>Cruise</strong> holds the current speed; <strong>+5 / −5</strong> go to the next multiple of 5</td>
+<td>The same switch as in the easy settings. A simulated drive without GPS. A faint "DEMO" shows on the screen while it is on. <strong>Cruise</strong> holds the current speed; <strong>+5 / −5</strong> go to the next multiple of 5</td>
 </tr>
 </tbody>
 </table></div>
 <blockquote>
 <p><strong>Hidden menu (for developers and testers).</strong> Tapping "ExCluster v…" at the very bottom of the settings 7 times opens "Debug mode" and "Drive logs". They record speed and sensor values on the phone for analysing a problem. You do not need them normally.</p>
 </blockquote>
-<h2>5. Adjust (screen position and size)</h2>
+<h2>5. Drive routes and maps</h2>
+<p>Turn on <strong>Record drive routes</strong> in Detailed settings → Other (off by default) to record where you drive.</p>
+<p><img alt="Detailed settings, Other: Record drive routes, Keep routes for, Recorded routes" src="img/route_settings.png" />
+<em>Detailed settings → Other: Record drive routes, Keep routes for, Recorded routes.</em></p>
+<ul>
+<li><strong>Start and end:</strong> nothing to press. While the app is on, a trip starts above 10 km/h and ends after 10 minutes standing or when the app closes; a short stop such as a traffic light stays in the same trip. Trips under 300 m and demo mode are not recorded.</li>
+<li><strong>List:</strong> <strong>Recorded routes</strong> → <strong>Show</strong> (Detailed settings → Other) lists each trip with its date, distance, time, highest and average speed.</li>
+<li><strong>On a map:</strong> <strong>GPX</strong> or <strong>KML</strong> sends the trip as a file to another app. KML opens in Google Earth or Google My Maps with the line coloured by speed (green up to 60 km/h, yellow up to 100, red above); GPX is read by most map and activity apps. The Google Maps app may not open these files directly.</li>
+</ul>
+<p><img alt="Recorded routes: date, distance, time, highest and average speed, GPX, KML and Delete buttons" src="img/routes.png" />
+  <em>Recorded routes: a summary per trip, GPX / KML share and Delete.</em></p>
+<ul>
+<li><strong>Privacy:</strong> routes stay on this phone; the app sends them nowhere and they are not in the phone's backup. A shared file holds the whole route, start and end included, so the app asks once more before sharing. Routes are deleted after <strong>Keep routes for</strong> (default 30 days; 7, 90 days or keep), and the list can delete one or all.</li>
+</ul>
+<h2>6. Adjust (screen position and size)</h2>
 <p>In the detailed settings, tap <strong>Adjust</strong> under <strong>Screen position &amp; size</strong> to get the bar. If you have unsaved changes, the app asks "Save your changes and adjust?", saves, and opens Adjust right away.</p>
-<p><img alt="The adjust bar: Done, Size and Digits sliders, Avoid the camera cutout, Swap battery / RPM gauges, info bar position and size" src="img/adjust.png" />
-<em>The adjust bar. The dashed line shows the area the cluster uses.</em></p>
+<p><img alt="The adjust bar: zone names (All, Info bar, Small gauges, Speedometer, Tachometer), Done, Size and Digits sliders, Avoid the camera cutout, Swap battery / RPM gauges, info bar position and size" src="img/adjust.png" />
+<em>The adjust bar with All picked. Red dashes: the whole cluster and the info bar; grey dashes: the zones.</em></p>
 <ul>
 <li><strong>Drag to move, pinch to resize:</strong> fit the cluster to the area visible through the steering wheel.</li>
-<li><strong>Size / Digits:</strong> sliders for the whole cluster and the speed digits (in the Modern theme, the size of the speed zone).</li>
+<li><strong>Size / Digits:</strong> sliders for the whole cluster and the speed digits (in the Modern theme, the size of the speed zone). Touch anywhere on a slider and the value follows your finger; the <strong>−</strong> and <strong>+</strong> buttons change it by 1 % for fine adjusting, and the number turns big while you touch the slider. A touch inside the bar that misses a control does not move the cluster behind it.</li>
 <li><strong>Info bar top or bottom, size:</strong> in the Retro theme, where the bottom row (trips, clock, GPS) goes and how big it is.</li>
 <li><strong>Avoid the camera cutout:</strong> by default the screen fills the whole display, camera cutout included. Turn this on if the cutout hides part of it.</li>
-<li><strong>Swap battery / RPM gauges (Retro):</strong> the small gauges (battery and others) and the RPM gauge trade places; in portrait the RPM goes to the top.</li>
-<li><strong>Modern theme:</strong> tap a zone name at the top (All, Speed, Time and so on) to move and resize each zone separately.</li>
-<li><strong>↕</strong> moves the bar up or down. <strong>Reset</strong> restores the position and size. <strong>Done</strong> saves.</li>
+<li><strong>Swap battery / RPM gauges (Retro):</strong> the small gauges (battery and others) and the RPM gauge trade places; in portrait the RPM goes to the top. What you moved or resized by hand is mirrored with them (left / right, in portrait top / bottom), so a symmetric setup stays symmetric.</li>
+<li><strong>One zone at a time:</strong> pick a zone by its name at the top of the bar or by tapping it on the cluster (yellow outline); then a drag moves only that zone, and two fingers or the <strong>Size</strong> slider resize it. Tap an empty spot to go back to <strong>All</strong>.</li>
 </ul>
+<p><img alt="Adjust with the tachometer picked: yellow outline, the bar shows its Size slider" src="img/adjust_zone.png" />
+  <em>The tachometer picked: a drag or two fingers move and resize only the tachometer. The bar was moved down with ↕.</em>
+  - Retro: <strong>Info bar</strong>, <strong>Small gauges</strong>, <strong>Speedometer</strong>, <strong>Tachometer</strong>. The info bar changes size, and dragging it into the upper or lower half of the screen moves it to the top or the bottom. The <strong>Digits</strong> slider shows with All or the speedometer.
+  - Modern: All, Speed, Time, Battery·G, Weather·GPS, Trip.
+  - <strong>Reset</strong> with a zone picked resets that zone only; with <strong>All</strong>, everything. Landscape and portrait keep their own.
+- <strong>↕</strong> moves the bar up or down. <strong>Reset</strong> restores the position and size. <strong>Done</strong> saves.</p>
 <p><img alt="Retro portrait screen with the RPM at the top" src="img/portrait.png" />
 <em>Retro (portrait) with the gauges swapped: the RPM comes to the top.</em></p>
-<h2>6. Troubleshooting</h2>
+<h2>7. Troubleshooting</h2>
 <div class="table-wrap"><table>
 <thead>
 <tr>
