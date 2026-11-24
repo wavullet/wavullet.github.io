@@ -42,25 +42,25 @@ the table says otherwise.</p>
 <td>Precise location (GPS)</td>
 <td>Speed, trip distance, GPS state; the current position's weather</td>
 <td>Only for the weather request: latitude and longitude rounded to 3 decimals (about 100 m) go to Open-Meteo (open-meteo.com)</td>
-<td>Not stored, except by the optional "Record drive routes" and the hidden drive log (below)</td>
+<td>Not stored, except by the optional "Record drive routes" and the hidden debug log (below)</td>
 </tr>
 <tr>
 <td>Motion sensors (accelerometer, gyroscope)</td>
 <td>G gauge, estimating speed through tunnels, noticing that the phone is being handled</td>
 <td>No</td>
-<td>Not stored (only in the optional drive log)</td>
+<td>Not stored (only in the optional debug log)</td>
 </tr>
 <tr>
 <td>Ambient light sensor</td>
 <td>Adjusts the screen brightness automatically (settings: "Screen brightness: Auto")</td>
 <td>No</td>
-<td>Not stored (only in the optional drive log)</td>
+<td>Not stored (only in the optional debug log)</td>
 </tr>
 <tr>
 <td>Battery level and temperature of the phone</td>
-<td>Battery gauge, drive log</td>
+<td>Battery gauge, debug log</td>
 <td>No</td>
-<td>Not stored (only in the optional drive log)</td>
+<td>Not stored (only in the optional debug log)</td>
 </tr>
 <tr>
 <td>Car data through Android Auto, only while the "Android Auto" switch in the settings is on (off by default; the car data permissions are asked when you turn it on) (speed, displayed speed, battery level and range, odometer, car model, charging state, tolls card state, car sensors)</td>
@@ -99,17 +99,17 @@ the table says otherwise.</p>
 <td>On the phone only: the route of each trip (latitude, longitude, time and speed, one point every few seconds while moving). Not in the phone's backup or device transfer. Trips older than the chosen number of days (default 30) are deleted automatically, and you can delete one or all in the app</td>
 </tr>
 <tr>
-<td>Drive log (hidden debug mode, off by default)</td>
+<td>Debug log (hidden debug mode, off by default)</td>
 <td>Analysing speed accuracy</td>
 <td>Only if you export it yourself (share sheet)</td>
-<td>On the phone: speed, sensor values (including the ambient light), satellite counts and timings. <strong>Latitude / longitude are written only if you switch on "Record route (location)" in the hidden menu</strong> (off by default; separate from "Record drive routes" above); the export can leave them out. Logs older than the chosen number of days (default 14) are deleted automatically</td>
+<td>On the phone: speed, sensor values (including the ambient light), satellite counts and timings. <strong>Latitude / longitude are written only if you switch on "Location in debug logs" in the hidden menu</strong> (off by default; separate from "Record drive routes" above); the export can leave them out. Logs older than the chosen number of days (default 14) are deleted automatically</td>
 </tr>
 </tbody>
 </table></div>
 <ul>
 <li>Recorded drive routes, debug logs, the car-data file and the "My sound" clip are excluded from Android backups and device transfers.</li>
 <li>You can turn location off in the phone's settings at any time; the app then cannot show speed. Delete the app (or its data)
-  to remove everything it stored; the route list and the drive log screen can also delete trips and sessions.</li>
+  to remove everything it stored; the route list and the debug log screen can also delete trips and sessions.</li>
 <li>Weather: the request contains only the rounded coordinates, no identifier. Open-Meteo's own policy applies to it.</li>
 <li>Children: the app is not directed at children.</li>
 <li>Contact: wavullet@gmail.com</li>
