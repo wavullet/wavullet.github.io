@@ -25,7 +25,7 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <main>
 <nav><a href="../../">wavullet</a><a href="../">ExCluster</a><a href="../guide-ko/">한국어</a><a href="../privacy/">Privacy policy</a></nav>
 <h1>ExCluster user guide</h1>
-<p>ExCluster turns your phone into a classic car instrument cluster. This guide is for version 1.22. Items are named exactly as on the settings screens, so you can find them as you read.</p>
+<p>ExCluster turns your phone into a classic car instrument cluster. This guide is for version 1.23. Items are named exactly as on the settings screens, so you can find them as you read.</p>
 <blockquote>
 <p><strong>Safety first.</strong> Mount the phone where it does not block your view or an airbag, and secure it so it cannot fall or slide when braking or on bumps. Do not operate the app while driving; change settings only when stopped.</p>
 </blockquote>
@@ -43,6 +43,7 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <em>Modern (landscape): a big digital number and a speed bar. Every zone can be moved separately.</em></p>
 <ul>
 <li><strong>Open the settings:</strong> tap the gear icon at the top right, or press and hold the cluster for 0.8 s.</li>
+<li><strong>Exit the app:</strong> press Back twice within 2 seconds on the cluster (a short message appears after the first press), or use <strong>Exit app</strong> at the top of the settings. A route being recorded is saved first.</li>
 <li><strong>Reset trip A or B:</strong> press and hold the trip number for 1.5 s.</li>
 <li><strong>GPS state:</strong> a green "GPS" is normal; "EST" means GPS dropped out (for example in a tunnel) and the speed is being estimated from the motion sensors.</li>
 <li>The virtual RPM and gear indicator follow your speed for the feel of a classic cluster; they are unrelated to the real car.</li>
@@ -50,10 +51,10 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 </ul>
 <h2>3. Easy settings</h2>
 <p>The first page of the settings.</p>
-<p><img alt="Easy settings: theme, language, driving rotation, plate number, weekends, HUD mode" src="img/settings.png" />
-<em>The top of the easy settings.</em></p>
-<p><img alt="Easy settings, lower part: Sound, Demo mode, Detailed settings, Copy test info" src="img/settings2.png" />
-<em>Further down: Sound, Demo mode, Detailed settings, Read the safety notice again (below), Copy test info.</em></p>
+<p><img alt="Easy settings: Exit app, theme, language, driving rotation, plate number, weekends, HUD mode" src="img/settings.png" />
+<em>The top of the easy settings, with <strong>Exit app</strong> at the top right.</em></p>
+<p><img alt="Easy settings, lower part: Sound, Demo mode, Detailed settings, GPS response check, Copy test info" src="img/settings2.png" />
+<em>Further down: Sound, Demo mode, Detailed settings, GPS response check, Copy test info, Read the safety notice again.</em></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -97,6 +98,10 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <tr>
 <td>Detailed settings</td>
 <td>Opens section 4</td>
+</tr>
+<tr>
+<td>GPS response check</td>
+<td>Finds out how many speed values per second your phone receives (about 15 to 30 seconds). Park the car under open sky first; it will not start while moving. Most phones give 1 per second; if yours gives 5 or more, you can switch on <strong>Use fast GPS</strong> (slightly more battery and heat). Measured while standing still, so a moving car can differ a little</td>
 </tr>
 <tr>
 <td>Read the safety notice again</td>
@@ -164,15 +169,7 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <tbody>
 <tr>
 <td>Match car speedometer</td>
-<td>Car speedometers read high, so this lifts the app's display to match. Only the display changes; trips and logs use the true speed</td>
-</tr>
-<tr>
-<td>Offset full from</td>
-<td>At and above this speed the whole offset is added; below it grows linearly from 0 km/h</td>
-</tr>
-<tr>
-<td>Tire / Tire size</td>
-<td>For the virtual RPM. Enter the sidewall marking, for example 245/45R19</td>
+<td>Car speedometers read a little high, so this lifts the app's display to match. <strong>The value you pick is the difference at 100 km/h</strong>: with +2, the app shows 102 when you really go 100. At other speeds the same percentage is used (+2 is about 2 %), so it shows about 51 at a true 50 and about 163 at 160, and 0 when you stand still. Pick the value by comparing the app with your car's speedometer at about 100 km/h. Only the display changes; trips and logs use the true speed</td>
 </tr>
 <tr>
 <td>Gearbox</td>
@@ -183,8 +180,8 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <td>Finds "forward" from GPS speed changes when you pull away or brake, so any phone angle works. Always on; it only shows its state, "Learning" or "Learned". Move the phone to another angle and it learns again by itself. Until it has learned, it reads the phone as standing upright (lying flat in HUD mode)</td>
 </tr>
 <tr>
-<td>Glitch on speed when GPS drops</td>
-<td>In tunnels the number is a sensor estimate, shown with colour fringing and brief tears</td>
+<td>Speed digits when GPS drops</td>
+<td>In tunnels the number is a sensor estimate. <strong>Glitch</strong> (default): big colour fringing and tears, and a little stronger after more than 10 s without GPS (the number stays). <strong>Blink</strong>: the number and "- -" take turns once a second. Or off</td>
 </tr>
 </tbody>
 </table></div>
@@ -241,7 +238,7 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 </tr>
 <tr>
 <td>Choose my sound</td>
-<td>Uses a short part of an audio file you choose, changing with speed and acceleration</td>
+<td>Uses a short part of an audio file you choose, changing with speed and acceleration. You own the rights to the audio you use: if you record the app screen and publish it, someone else's music in it can cause copyright problems, so use sounds you made or are allowed to use. Public videos can also show licence plates, your surroundings and your route</td>
 </tr>
 <tr>
 <td>Volume</td>
