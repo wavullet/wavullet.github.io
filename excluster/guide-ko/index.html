@@ -25,7 +25,7 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <main>
 <nav><a href="../../">wavullet</a><a href="../">ExCluster</a><a href="../guide/">English</a><a href="../privacy-ko/">개인정보처리방침</a></nav>
 <h1>ExCluster 사용 설명서</h1>
-<p>스마트폰을 클래식 자동차 계기판처럼 쓰는 앱입니다. 이 설명서는 버전 1.23 기준입니다. 설정 화면의 글자와 같은 이름으로 적었으니 화면을 보면서 찾아 보세요.</p>
+<p>스마트폰을 클래식 자동차 계기판처럼 쓰는 앱입니다. 이 설명서는 버전 1.24 기준입니다. 설정 화면의 글자와 같은 이름으로 적었으니 화면을 보면서 찾아 보세요.</p>
 <blockquote>
 <p><strong>안전 먼저.</strong> 폰은 시야나 에어백을 가리지 않는 곳에, 급제동이나 요철에도 떨어지지 않게 단단히 고정하세요. 운전 중에는 조작하지 말고, 설정은 정차 중에 바꾸세요.</p>
 </blockquote>
@@ -44,6 +44,7 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <ul>
 <li><strong>설정 열기:</strong> 오른쪽 위 톱니 아이콘을 누르거나 계기판을 0.8초 길게 누릅니다.</li>
 <li><strong>앱 종료:</strong> 계기판에서 뒤로 가기를 2초 안에 두 번 누르거나(첫 번째에 안내 문구가 잠깐 나옵니다) 설정 맨 위의 <strong>앱 종료</strong>를 누릅니다. 기록 중인 경로는 먼저 저장됩니다.</li>
+<li><strong>소리 켜기/끄기:</strong> 레트로에서는 오른쪽 RPM 계기 가운데 동그란 부분(스피커 모양)을, 모던에서는 속도 숫자(오른쪽 아래 음표 모양)를 짧게 누릅니다. 켜짐은 소리가 나는 모양, 꺼짐은 사선이 그어진 모양이고, 쉬운 설정의 <strong>소리</strong>와 같은 설정입니다. 길게 누르면 평소처럼 설정이 열립니다. 모던에서는 <strong>내 소리</strong>를 저장해 둔 때만 나타납니다. 속도 음성 안내와 경고에는 영향이 없습니다.</li>
 <li><strong>트립 A·B 거리 0으로:</strong> 트립 숫자를 1.5초 길게 누릅니다.</li>
 <li><strong>GPS 상태:</strong> 초록색 "GPS"는 정상, "EST"는 터널 등에서 GPS가 끊겨 센서로 속도를 추정 중이라는 뜻입니다.</li>
 <li>가상 RPM과 변속 표시는 속도에 맞춰 움직이는 장식이고, 실제 차의 값과는 무관합니다.</li>
@@ -53,8 +54,8 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <p>설정 화면 첫 페이지입니다.</p>
 <p><img alt="쉬운 설정: 앱 종료, 테마, 언어, 부제 규칙, 차량번호 끝자리, 주말 제외, HUD 모드" src="img/settings.png" />
 <em>쉬운 설정의 첫 부분입니다. 오른쪽 위에 <strong>앱 종료</strong>가 있습니다.</em></p>
-<p><img alt="쉬운 설정 아랫부분: 소리, 데모 모드, 상세 설정, GPS 반응 속도 측정, 테스트 정보 복사" src="img/settings2.png" />
-<em>아래로 내리면 소리, 데모 모드, 상세 설정 열기, GPS 반응 속도 측정, 테스트 정보 복사, 안전 안내 다시 보기가 있습니다.</em></p>
+<p><img alt="쉬운 설정 아랫부분: 소리, 데모 모드, 상세 설정, 테스트 정보 복사" src="img/settings2.png" />
+<em>아래로 내리면 소리, 데모 모드, 상세 설정 열기, 테스트 정보 복사, 안전 안내 다시 보기가 있습니다.</em></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -98,10 +99,6 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <tr>
 <td>상세 설정 열기</td>
 <td>아래 4번의 세부 설정으로 갑니다</td>
-</tr>
-<tr>
-<td>GPS 반응 속도 측정</td>
-<td>내 폰이 GPS 속도를 초당 몇 번 받는지 알아봅니다(약 15~30초). 하늘이 트인 곳에 차를 세운 뒤 눌러 주세요. 달리는 중에는 시작되지 않습니다. 대부분의 폰은 초당 1번이고, 5번 이상이면 <strong>빠른 GPS 사용</strong>을 켤 수 있습니다(배터리와 발열이 조금 늘어납니다). 정지 상태에서 재므로 달리는 중과는 조금 다를 수 있습니다</td>
 </tr>
 <tr>
 <td>안전 안내 다시 보기</td>
@@ -169,11 +166,11 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <tbody>
 <tr>
 <td>계기판 맞춤 보정</td>
-<td>차 계기판은 실제보다 조금 높게 표시돼서, 앱 표시를 거기에 맞춥니다. <strong>고르는 값은 100 km/h일 때의 차이</strong>입니다. +2로 두면 실제 100 km/h에서 앱이 102를 보여 줍니다. 다른 속도에서는 같은 비율(+2는 약 2%)로 맞춰서, 실제 50 km/h에서는 약 51, 160 km/h에서는 약 163을 보여 주고 멈춰 있으면 0입니다. 100 km/h 근처에서 앱과 차 계기판을 비교해서 값을 고르세요. 표시만 바뀌고 트립과 기록은 실제 속도입니다</td>
+<td>차 계기판은 보통 실제 속도보다 조금 높게 표시되도록 만들어져 있어서, 앱도 기본으로 <strong>+2</strong>를 켜 두었습니다(실제 100 km/h에서 앱이 102). <strong>고르는 값은 100 km/h일 때의 차이</strong>이고, 다른 속도에서는 같은 비율(+2는 약 2%)로 맞춰서 실제 50 km/h에서는 약 51, 160 km/h에서는 약 163을 보여 주고 멈춰 있으면 0입니다. 기본값 +2는 한 차종(EX30)에서 맞춰 본 값이라 차량과 타이어 마모에 따라 다를 수 있습니다. 크루즈 컨트롤처럼 같은 속도로 달리면서 앱과 차 계기판을 비교해 0 ~ +5(0.5 단위)에서 고르세요. 실제보다 낮게 보이면 위험해서 마이너스 값은 없습니다. 표시만 바뀌고 트립과 기록은 실제 속도입니다</td>
 </tr>
 <tr>
 <td>변속기</td>
-<td>가상 RPM의 기어비와 변속 시점을 고릅니다</td>
+<td>가상 RPM의 기어비와 변속 시점을 고릅니다. <strong>클래식 5단</strong>(기본)은 보통 주행, <strong>스포티 5단</strong>은 같은 속도에서 RPM이 더 높고 변속을 늦게 하며 급가속이나 고속(180 km/h 근처)에서도 RPM 여유를 남깁니다. <strong>편안한 4단 자동</strong>은 일찍 변속해서 RPM이 낮게 유지됩니다. 실제 차와는 무관합니다</td>
 </tr>
 <tr>
 <td>거치 방향 학습</td>
@@ -403,7 +400,7 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <tbody>
 <tr>
 <td>속도가 차 계기판과 다르다</td>
-<td>앱 속도는 GPS 기준입니다. 상세 설정의 <strong>계기판 맞춤 보정</strong>으로 맞춥니다</td>
+<td>앱 속도는 GPS 기준입니다. 차 계기판은 보통 실제보다 높게 표시돼서 앱은 기본으로 +2(100 km/h에서 2 km/h 높게)를 적용합니다. 그래도 다르면 상세 설정의 <strong>계기판 맞춤 보정</strong>을 0 ~ +5에서 조정하세요</td>
 </tr>
 <tr>
 <td>화면이 카메라 구멍에 가린다</td>

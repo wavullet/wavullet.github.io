@@ -25,7 +25,7 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <main>
 <nav><a href="../../">wavullet</a><a href="../">ExCluster</a><a href="../guide-ko/">한국어</a><a href="../privacy/">Privacy policy</a></nav>
 <h1>ExCluster user guide</h1>
-<p>ExCluster turns your phone into a classic car instrument cluster. This guide is for version 1.23. Items are named exactly as on the settings screens, so you can find them as you read.</p>
+<p>ExCluster turns your phone into a classic car instrument cluster. This guide is for version 1.24. Items are named exactly as on the settings screens, so you can find them as you read.</p>
 <blockquote>
 <p><strong>Safety first.</strong> Mount the phone where it does not block your view or an airbag, and secure it so it cannot fall or slide when braking or on bumps. Do not operate the app while driving; change settings only when stopped.</p>
 </blockquote>
@@ -44,6 +44,7 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <ul>
 <li><strong>Open the settings:</strong> tap the gear icon at the top right, or press and hold the cluster for 0.8 s.</li>
 <li><strong>Exit the app:</strong> press Back twice within 2 seconds on the cluster (a short message appears after the first press), or use <strong>Exit app</strong> at the top of the settings. A route being recorded is saved first.</li>
+<li><strong>Sound on / off:</strong> short-press the round centre of the RPM gauge on the right (a speaker icon) in Retro, or the speed digits (a music note appears at their lower right) in Modern. On shows the sound waves, off shows the icon crossed by a slash; it is the same setting as <strong>Sound</strong> in the easy settings. A long press still opens the settings. In Modern it appears only once <strong>My sound</strong> is saved. Voice announcements and warnings are not affected.</li>
 <li><strong>Reset trip A or B:</strong> press and hold the trip number for 1.5 s.</li>
 <li><strong>GPS state:</strong> a green "GPS" is normal; "EST" means GPS dropped out (for example in a tunnel) and the speed is being estimated from the motion sensors.</li>
 <li>The virtual RPM and gear indicator follow your speed for the feel of a classic cluster; they are unrelated to the real car.</li>
@@ -53,8 +54,8 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <p>The first page of the settings.</p>
 <p><img alt="Easy settings: Exit app, theme, language, driving rotation, plate number, weekends, HUD mode" src="img/settings.png" />
 <em>The top of the easy settings, with <strong>Exit app</strong> at the top right.</em></p>
-<p><img alt="Easy settings, lower part: Sound, Demo mode, Detailed settings, GPS response check, Copy test info" src="img/settings2.png" />
-<em>Further down: Sound, Demo mode, Detailed settings, GPS response check, Copy test info, Read the safety notice again.</em></p>
+<p><img alt="Easy settings, lower part: Sound, Demo mode, Detailed settings, Copy test info" src="img/settings2.png" />
+<em>Further down: Sound, Demo mode, Detailed settings, Copy test info, Read the safety notice again.</em></p>
 <div class="table-wrap"><table>
 <thead>
 <tr>
@@ -98,10 +99,6 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <tr>
 <td>Detailed settings</td>
 <td>Opens section 4</td>
-</tr>
-<tr>
-<td>GPS response check</td>
-<td>Finds out how many speed values per second your phone receives (about 15 to 30 seconds). Park the car under open sky first; it will not start while moving. Most phones give 1 per second; if yours gives 5 or more, you can switch on <strong>Use fast GPS</strong> (slightly more battery and heat). Measured while standing still, so a moving car can differ a little</td>
 </tr>
 <tr>
 <td>Read the safety notice again</td>
@@ -169,11 +166,11 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <tbody>
 <tr>
 <td>Match car speedometer</td>
-<td>Car speedometers read a little high, so this lifts the app's display to match. <strong>The value you pick is the difference at 100 km/h</strong>: with +2, the app shows 102 when you really go 100. At other speeds the same percentage is used (+2 is about 2 %), so it shows about 51 at a true 50 and about 163 at 160, and 0 when you stand still. Pick the value by comparing the app with your car's speedometer at about 100 km/h. Only the display changes; trips and logs use the true speed</td>
+<td>Car speedometers usually read a little higher than the true speed, so the app starts with <strong>+2</strong> switched on (the app shows 102 when you really go 100). <strong>The value you pick is the difference at 100 km/h</strong>; at other speeds the same percentage is used (+2 is about 2 %), so it shows about 51 at a true 50 and about 163 at 160, and 0 when you stand still. The default +2 was matched on one car (an EX30), so it can differ with the car and tire wear: drive at a steady speed (for example with cruise control), compare the app with your car's speedometer and pick a value from 0 to +5 (steps of 0.5). There are no minus values, because showing less than the true speed would be unsafe. Only the display changes; trips and logs use the true speed</td>
 </tr>
 <tr>
 <td>Gearbox</td>
-<td>Gear ratios and shift points of the virtual RPM</td>
+<td>Gear ratios and shift points of the virtual RPM. <strong>Classic 5-speed</strong> (default) is for ordinary driving; <strong>Sporty 5-speed</strong> revs higher at the same speed, shifts later and keeps rpm headroom in hard acceleration and at high speed (around 180 km/h); <strong>Relaxed 4-speed automatic</strong> shifts early and keeps the rpm low. It has nothing to do with the real car</td>
 </tr>
 <tr>
 <td>Mount direction</td>
@@ -403,7 +400,7 @@ p>em:only-child{display:block;text-align:center;color:var(--sub);font-size:.9rem
 <tbody>
 <tr>
 <td>The speed differs from the car's speedometer</td>
-<td>The app speed is GPS-based. Use <strong>Match car speedometer</strong> in the detailed settings</td>
+<td>The app speed is GPS-based. Car speedometers usually read higher than the true speed, so the app applies +2 by default (2 km/h more at 100 km/h). If it still differs, adjust <strong>Match car speedometer</strong> in the detailed settings between 0 and +5</td>
 </tr>
 <tr>
 <td>The camera cutout hides part of the screen</td>
